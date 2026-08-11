@@ -1,0 +1,8 @@
+This repository contains a Railway adapter and unmodified upstream Docker runtime configuration files from Paymenter v1.5.7.
+
+Paymenter source and the official icon are from:
+https://github.com/Paymenter/Paymenter/tree/v1.5.7
+https://paymenter.org/iso.svg
+
+Paymenter is Copyright 2024-2026 Paymenter and licensed under MIT.
+No affiliation with or endorsement by Paymenter is implied.
