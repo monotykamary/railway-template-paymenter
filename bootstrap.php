@@ -14,8 +14,12 @@ $app = require __DIR__ . '/../bootstrap/app.php';
 $app->make(Kernel::class)->bootstrap();
 
 try {
-    if (!Schema::hasTable('users') || !Schema::hasTable('settings')) {
-        exit(1);
+    $requiredTables = ['users', 'settings', 'notification_templates', 'user_sessions'];
+
+    foreach ($requiredTables as $table) {
+        if (!Schema::hasTable($table)) {
+            exit(1);
+        }
     }
 
     $appUrl = rtrim((string) getenv('APP_URL'), '/');
@@ -26,6 +30,24 @@ try {
     }
     Setting::firstOrCreate(['key' => 'company_name'], ['value' => $companyName]);
     Cache::forget('settings');
+
+    $passportPrivateKey = storage_path('oauth-private.key');
+    $passportPublicKey = storage_path('oauth-public.key');
+
+    $passportKeysMissing = !is_file($passportPrivateKey)
+        || !is_file($passportPublicKey)
+        || filesize($passportPrivateKey) === 0
+        || filesize($passportPublicKey) === 0;
+
+    if ($passportKeysMissing) {
+        $status = Artisan::call('passport:keys', ['--force' => true]);
+
+        if ($status !== 0) {
+            exit($status);
+        }
+
+        fwrite(STDOUT, "Generated persistent Passport encryption keys.\n");
+    }
 
     if (User::query()->count() === 0) {
         $email = (string) getenv('PAYMENTER_ADMIN_EMAIL');

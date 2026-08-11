@@ -19,7 +19,7 @@ The template creates a public `paymenter` service plus private `mariadb` and `re
 
 ### Implementation Details
 
-The Paymenter service owns the public HTTPS domain. Its container runs nginx, PHP-FPM, the Redis queue worker, and the Laravel scheduler together, matching the upstream shared-filesystem design. A narrow adapter maps generated configuration, private uploads, themes, and extensions into one Railway volume.
+The Paymenter service owns the public HTTPS domain. Its container runs nginx, PHP-FPM, the Redis queue worker, and the Laravel scheduler together, matching the upstream shared-filesystem design. A narrow adapter maps generated configuration, OAuth encryption keys, private uploads, themes, and extensions into one Railway volume.
 
 On an empty database, the adapter creates the first administrator from `PAYMENTER_ADMIN_EMAIL` and the generated `PAYMENTER_ADMIN_PASSWORD`. Read those values in the Paymenter service variables, sign in at `/login`, and rotate the password. Do not change database or Redis references independently.
 

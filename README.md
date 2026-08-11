@@ -11,7 +11,7 @@ The verified Deploy on Railway button is added only after the published route pa
 - Redis `7.4.5`
 - One persistent Paymenter data volume
 
-The small adapter preserves Paymenter's generated key, private uploads, themes, and extensions under `/data`, runs upstream migrations, and creates the first administrator only when the user table is empty.
+The small adapter preserves Paymenter's generated key, Passport encryption keys, private uploads, themes, and extensions under `/data`, runs upstream migrations, and creates the first administrator only when the user table is empty.
 
 ## First login
 
