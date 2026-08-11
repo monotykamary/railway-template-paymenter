@@ -2,7 +2,7 @@
 
 A pinned and Railway-adapted deployment for [Paymenter](https://github.com/Paymenter/Paymenter), open-source billing software for hosting providers.
 
-The verified Deploy on Railway button is added only after the published route passes identity and topology checks.
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/paymenter-v157-railway)
 
 ## What this deploys
 
