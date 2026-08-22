@@ -2,7 +2,7 @@
 
 A pinned and Railway-adapted deployment for [Paymenter](https://github.com/Paymenter/Paymenter), open-source billing software for hosting providers.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/paymenter-v157-railway)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/paymenter-v157-railway?referralCode=ZqgrJ0)
 
 ## What this deploys
 
