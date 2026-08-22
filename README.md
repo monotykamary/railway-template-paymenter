@@ -6,7 +6,7 @@ A pinned and Railway-adapted deployment for [Paymenter](https://github.com/Payme
 
 ## What this deploys
 
-- Paymenter `v1.5.7`
+- Paymenter `v1.5.8`
 - MariaDB `11.8.3`
 - Redis `7.4.5`
 - One persistent Paymenter data volume
@@ -26,7 +26,7 @@ Read `PAYMENTER_ADMIN_EMAIL` and the generated `PAYMENTER_ADMIN_PASSWORD` from t
 
 ## Version pins
 
-- Paymenter source: commit `f8a884e670e9b9e5efb59ab5a7c606bf058b17d7` (`v1.5.7`), archive SHA-256 `36f52aacaaee0bb2d2a0591033016f089992816fab5c22458623be6d11cc7d78`
+- Paymenter source: commit `e9ff5c5e480abdacee3ee156245b2a8945236fd1` (`v1.5.8`), archive SHA-256 `ab6e40ab9ae69aacf6e138f12b882edc42bd39533d057f8cd69b7c724a584b54`
 - MariaDB: `mariadb:11.8.3@sha256:ae6119716edac6998ae85508431b3d2e666530ddf4e94c61a10710caec9b0f71`
 - Redis: `redis:7.4.5-alpine@sha256:bb186d083732f669da90be8b0f975a37812b15e913465bb14d845db72a4e3e08`
 
@@ -42,6 +42,6 @@ No production service uses `latest`.
 ## Upstream and license
 
 - Source: https://github.com/Paymenter/Paymenter
-- Release: https://github.com/Paymenter/Paymenter/releases/tag/v1.5.7
+- Release: https://github.com/Paymenter/Paymenter/releases/tag/v1.5.8
 - Documentation: https://paymenter.org/docs
 - License: MIT; see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE)

@@ -1,7 +1,7 @@
 FROM alpine:3.24@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b AS source
 
-ARG PAYMENTER_COMMIT=f8a884e670e9b9e5efb59ab5a7c606bf058b17d7
-ARG PAYMENTER_ARCHIVE_SHA256=36f52aacaaee0bb2d2a0591033016f089992816fab5c22458623be6d11cc7d78
+ARG PAYMENTER_COMMIT=e9ff5c5e480abdacee3ee156245b2a8945236fd1
+ARG PAYMENTER_ARCHIVE_SHA256=ab6e40ab9ae69aacf6e138f12b882edc42bd39533d057f8cd69b7c724a584b54
 
 RUN apk add --no-cache ca-certificates curl tar \
     && curl -fsSL "https://github.com/Paymenter/Paymenter/archive/${PAYMENTER_COMMIT}.tar.gz" -o /tmp/paymenter.tar.gz \
@@ -49,7 +49,7 @@ RUN npm run build
 FROM application AS production
 
 LABEL org.opencontainers.image.source="https://github.com/monotykamary/railway-template-paymenter"
-LABEL org.opencontainers.image.version="1.5.7-railway.1"
+LABEL org.opencontainers.image.version="1.5.8-railway.1"
 LABEL org.opencontainers.image.licenses="MIT"
 
 COPY --from=assets /app/public /app/public
