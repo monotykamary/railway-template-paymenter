@@ -2,7 +2,7 @@
 
 ## About Hosting Paymenter
 
-Paymenter is open-source billing, invoicing, client-management, and service-automation software built for hosting providers. This template deploys stable release `v1.5.8` with private MariaDB and Redis services and durable application storage.
+Paymenter is open-source billing, invoicing, client-management, and service-automation software built for hosting providers. This template deploys stable release `v1.5.9` with private MariaDB and Redis services and durable application storage.
 
 ## Common Use Cases
 
