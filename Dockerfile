@@ -10,7 +10,7 @@ RUN apk add --no-cache ca-certificates curl tar \
     && tar -xzf /tmp/paymenter.tar.gz --strip-components=1 -C /src \
     && rm /tmp/paymenter.tar.gz
 
-FROM composer:2.10.2@sha256:4d71c3c2109c61d5415544264b59ad4087e4c5b7244481723664138fd36d5040 AS composer
+FROM composer:2.10.3@sha256:af98f42dfff7c68ba8d53c2164fd9fde1087b7d449514baa38c418b1f6bc4bac AS composer
 
 FROM php:8.3-fpm-alpine@sha256:bf90236449d333cef008b1f01c72a3d4f11a6470a74629665e4c6b6158f03fc8 AS application
 
